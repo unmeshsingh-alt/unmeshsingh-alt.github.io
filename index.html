@@ -1,133 +1,113 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unmesh Singh | Student Researcher</title>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #111;
-  line-height: 1.7;
-}
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
 
-/* HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  z-index: 100;
-}
+<body>
 
-header.scrolled {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
+<header id="header">
+  <nav>
+    <div class="logo">US</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-nav {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
 
-.logo {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+    <!-- LEFT -->
+    <div class="hero-left">
+      <h1>Unmesh Singh</h1>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+      <p class="hero-role">
+        Integrated M.Sc. Student & Research Aspirant<br>
+        Computational Biology • Astrophysics • Machine Learning
+      </p>
 
-nav a {
-  text-decoration: none;
-  color: #111;
-  font-size: 0.95rem;
-}
+      <p class="hero-info">
+        National Institute of Science Education and Research (NISER)<br>
+        Bhubaneswar, Odisha, India
+      </p>
 
-/* HERO */
-.hero {
-  padding-top: 9rem;
-}
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/unmesh-singh-83a64737a/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/unmeshsingh-alt" target="_blank">GitHub</a>
+      </div>
+    </div>
 
-.hero-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <img src="unmesh.jpg" alt="Unmesh Singh">
+    </div>
 
-.hero-left {
-  flex: 1;
-}
+  </div>
+</section>
 
-.hero-left h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 0.6rem;
-}
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am a first-year Integrated M.Sc. student at the National Institute of Science Education and Research (NISER).
+    My interests lie in applying computational and machine learning approaches to problems in biology and physics,
+    particularly in molecular biology, bioinformatics, astrobiology, and astrophysics.
+  </p>
+</section>
 
-.hero-role {
-  color: #444;
-  margin-bottom: 1rem;
-}
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Computational Biology & Bioinformatics</li>
+    <li>Machine Learning for Scientific Data</li>
+    <li>Protein Folding & Gene Expression Analysis</li>
+    <li>Astrobiology & Exoplanetary Science</li>
+    <li>Computational Astrophysics</li>
+  </ul>
+</section>
 
-.hero-info {
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 1.2rem;
-}
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <h3>Projects in Progress</h3>
+    <p>
+      I am currently developing foundational computational and research projects.
+      This section will be updated with detailed descriptions, methodologies, and GitHub links.
+    </p>
+  </div>
+</section>
 
-.hero-links a {
-  margin-right: 1rem;
-  text-decoration: none;
-  border-bottom: 1px solid #111;
-  color: #111;
-  font-size: 0.95rem;
-}
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <p><strong>Programming:</strong> Python, HTML, LaTeX</p>
+  <p><strong>Libraries:</strong> TensorFlow, PyTorch</p>
+  <p><strong>Core Skills:</strong> Machine Learning</p>
+</section>
 
-.hero-right img {
-  width: 260px;
-  border-radius: 12px;
-}
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:Unmesh.Singh@niser.ac.in">Unmesh.Singh@niser.ac.in</a></p>
+  <p>NISER, Bhubaneswar, Odisha, India</p>
+</section>
 
-/* SECTIONS */
-section {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-}
+<footer>
+  <p>© 2025 Unmesh Singh</p>
+</footer>
 
-h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 1rem;
-}
-
-ul li {
-  margin-left: 1.2rem;
-  list-style: square;
-}
-
-.project-card {
-  border: 1px solid #eee;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: #777;
-  font-size: 0.9rem;
-}
+<script src="script.js"></script>
+</body>
+</html>
