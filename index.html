@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unmesh Singh | Computational Biology & Astrophysics Researcher</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Unmesh Singh | Student at NISER</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ffffff;
-            --secondary-color: #f8f9fa;
-            --accent-color: #2563eb;
-            --accent-light: #3b82f6;
-            --text-color: #1f2937;
-            --text-light: #6b7280;
-            --card-bg: #ffffff;
-            --header-bg: rgba(255, 255, 255, 0.92);
-            --border-color: #e5e7eb;
-            --code-bg: #f1f5f9;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            --white: #ffffff;
+            --light-gray: #f9f9f9;
+            --medium-gray: #f0f0f0;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --accent: #2c5aa0;
+            --accent-light: #4a7cc8;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -34,65 +28,57 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--primary-color);
-            color: var(--text-color);
+            background-color: var(--white);
+            color: var(--dark-gray);
             line-height: 1.6;
             overflow-x: hidden;
             padding-top: 80px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.25rem 5%;
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            backdrop-filter: blur(8px);
-            background-color: var(--header-bg);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             transition: var(--transition);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--medium-gray);
             height: 80px;
         }
 
         header.minimized {
-            padding: 0.75rem 5%;
+            padding: 1rem 5%;
             height: 60px;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 2px 15px var(--shadow);
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent-color);
+            color: var(--accent);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .logo span {
-            color: var(--text-color);
-        }
-
-        .logo:hover {
-            color: var(--accent-light);
+            color: var(--dark-gray);
         }
 
         .nav-links {
@@ -101,17 +87,16 @@
         }
 
         .nav-links a {
-            color: var(--text-color);
+            color: var(--dark-gray);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
             position: relative;
             transition: var(--transition);
-            padding: 0.5rem 0;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--accent);
         }
 
         .nav-links a::after {
@@ -119,25 +104,23 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background: var(--accent-color);
-            bottom: 0;
+            background: var(--accent);
+            bottom: -5px;
             left: 0;
             transition: var(--transition);
         }
 
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
+        .nav-links a:hover::after {
             width: 100%;
         }
 
         .mobile-menu-btn {
             display: none;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: var(--text-color);
+            color: var(--dark-gray);
             background: none;
             border: none;
-            padding: 0.5rem;
         }
 
         /* Hero Section */
@@ -147,39 +130,38 @@
             align-items: center;
             padding: 0 5%;
             position: relative;
-            overflow: hidden;
             margin-top: -80px;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
         }
 
         .hero-content {
             flex: 1;
-            max-width: 600px;
+            max-width: 650px;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
         .hero h1 {
-            font-size: 3.25rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
         }
 
         .hero h1 span {
-            color: var(--accent-color);
+            color: var(--accent);
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-light);
+            font-size: 1.3rem;
+            color: var(--text-gray);
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
 
         .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
             max-width: 550px;
         }
 
@@ -194,23 +176,21 @@
         .image-container {
             width: 320px;
             height: 380px;
-            border-radius: 16px;
+            border-radius: 8px;
             overflow: hidden;
             position: relative;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border-color);
-            background-color: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: transform 0.6s ease;
         }
 
         .image-container:hover img {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
         .contact-info {
@@ -221,28 +201,20 @@
         }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-light);
+            color: var(--text-gray);
             transition: var(--transition);
             padding: 0.5rem 0;
         }
 
         .contact-item:hover {
-            color: var(--accent-color);
-        }
-
-        .contact-item i {
-            font-size: 1.1rem;
-            width: 20px;
+            color: var(--accent);
         }
 
         /* Section Styles */
         section {
             padding: 5rem 5%;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
             scroll-margin-top: 80px;
         }
@@ -258,147 +230,145 @@
         }
 
         .section-title {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: var(--accent);
+            bottom: -8px;
+            left: 20%;
+            border-radius: 2px;
         }
 
         .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--text-light);
+            font-size: 1.1rem;
+            color: var(--text-gray);
             max-width: 700px;
             margin: 0 auto;
         }
 
-        /* Research Interests */
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Interests */
         .interests-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .interest-card {
-            background: var(--card-bg);
-            border-radius: 12px;
+            background: var(--white);
+            border-radius: 8px;
             padding: 2rem;
             transition: var(--transition);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--medium-gray);
+            box-shadow: 0 5px 15px var(--shadow);
+            text-align: center;
         }
 
         .interest-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-color);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .interest-icon {
-            font-size: 2rem;
-            color: var(--accent-color);
-            margin-bottom: 1.25rem;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
         }
 
         .interest-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
             font-weight: 600;
         }
 
         .interest-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-size: 1rem;
         }
 
         /* Education */
-        .timeline {
-            position: relative;
+        .education-container {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: var(--accent-color);
-            opacity: 0.2;
+        .education-item {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
         }
 
-        .timeline-item {
-            position: relative;
-            padding-left: 80px;
-            margin-bottom: 2.5rem;
+        .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .timeline-date {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 60px;
-            height: 60px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .education-year {
+            color: var(--accent);
             font-weight: 600;
-            color: white;
-            box-shadow: var(--shadow-md);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            text-align: center;
-            line-height: 1.2;
-        }
-
-        .timeline-content {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.125rem;
             margin-bottom: 0.5rem;
-            color: var(--text-color);
-            font-weight: 600;
+            font-size: 1rem;
         }
 
-        .timeline-content p {
-            color: var(--text-light);
-            font-size: 0.95rem;
+        .education-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
         }
 
-        /* Skills & Certifications */
-        .skills-grid {
+        .education-details {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            max-width: 800px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
 
         .skill-category {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid var(--medium-gray);
         }
 
         .skill-category h3 {
-            font-size: 1.125rem;
-            margin-bottom: 1.25rem;
-            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-gray);
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
         }
 
         .skill-list {
@@ -406,11 +376,9 @@
         }
 
         .skill-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 0.7rem 0;
+            color: var(--text-gray);
+            border-bottom: 1px solid var(--medium-gray);
         }
 
         .skill-list li:last-child {
@@ -418,273 +386,130 @@
         }
 
         .skill-level {
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            background: rgba(37, 99, 235, 0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-family: 'JetBrains Mono', monospace;
+            float: right;
+            color: var(--accent);
+            font-weight: 500;
         }
 
-        .certifications {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .certification-item {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--accent-color);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .certification-item:hover {
-            transform: translateX(4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .certification-info h3 {
-            font-size: 1.125rem;
-            margin-bottom: 0.25rem;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-
-        .certification-info p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .certification-badge {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-        }
-
-        /* Projects Section */
+        /* Projects */
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-color);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .project-header {
-            height: 180px;
-            width: 100%;
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-header::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            animation: shine 3s infinite;
-        }
-
-        .project-icon {
-            font-size: 3rem;
-            z-index: 1;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-
-        .project-content p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .project-tag {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--accent-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .contact-card {
-            background: var(--card-bg);
-            border-radius: 12px;
+        .project-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--medium-gray);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
             padding: 2rem;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
         }
 
-        .contact-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-color);
-            box-shadow: var(--shadow-md);
+        .project-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
         }
 
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.5rem;
-            color: var(--accent-color);
+        .project-content p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
-        .contact-card h3 {
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-            font-weight: 600;
+        .project-status {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: rgba(44, 90, 160, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        .contact-card a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: var(--transition);
-            display: block;
-            font-size: 0.95rem;
-        }
-
-        .contact-card a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary-color);
-            padding: 3rem 5% 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-content {
-            max-width: 1200px;
+        /* Contact */
+        .contact-container {
+            max-width: 800px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            margin-bottom: 2rem;
+        .contact-message {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
         }
 
-        .social-links a {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--card-bg);
+        .contact-links {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            color: var(--text-color);
-            font-size: 1.125rem;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--accent);
+            border-radius: 6px;
             transition: var(--transition);
-            border: 1px solid var(--border-color);
         }
 
-        .social-links a:hover {
-            background: var(--accent-color);
+        .contact-link:hover {
+            background: var(--accent);
             color: white;
             transform: translateY(-2px);
         }
 
-        .footer-info {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+        /* Footer */
+        footer {
+            background: var(--light-gray);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--medium-gray);
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .copyright {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* Code-like elements */
-        .code-block {
-            background: var(--code-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border: 1px solid var(--border-color);
-            overflow-x: auto;
-            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
             font-size: 0.9rem;
-        }
-
-        .code-comment {
-            color: #6b7280;
-        }
-
-        .code-keyword {
-            color: #2563eb;
-        }
-
-        .code-string {
-            color: #059669;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--medium-gray);
         }
 
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -701,16 +526,7 @@
             }
         }
 
-        @keyframes shine {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 992px) {
             .hero {
                 flex-direction: column;
@@ -753,14 +569,14 @@
                 top: 60px;
                 right: -100%;
                 flex-direction: column;
-                background: var(--header-bg);
+                background: rgba(255, 255, 255, 0.98);
                 width: 100%;
                 text-align: center;
                 padding: 2rem;
                 transition: var(--transition);
-                backdrop-filter: blur(8px);
-                box-shadow: var(--shadow-md);
-                border-bottom: 1px solid var(--border-color);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid var(--medium-gray);
                 gap: 1.5rem;
             }
 
@@ -777,7 +593,7 @@
             }
 
             .hero-subtitle {
-                font-size: 1.125rem;
+                font-size: 1.1rem;
             }
 
             .section-title {
@@ -812,18 +628,16 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <a href="#" class="logo">
-            <i class="fas fa-code"></i>
-            <span>unmesh</span>.dev
-        </a>
+        <a href="#" class="logo">Unmesh <span>Singh</span></a>
         
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            ☰
         </button>
         
         <nav class="nav-links" id="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#research">Research</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
@@ -835,74 +649,72 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Unmesh <span>Singh</span></h1>
-            <div class="hero-subtitle">Computational Biology & Astrophysics Researcher</div>
+            <div class="hero-subtitle">First Year Integrated M.Sc. Student at NISER</div>
             <p class="hero-description">
-                First-year Integrated M.Sc. student at NISER passionate about applying machine learning 
-                and computational methods to solve fundamental problems in molecular biology and astrophysics.
+                Currently pursuing integrated M.Sc. in Sciences at the National Institute of Science Education and Research. 
+                Beginning my journey in computational science and exploring interests in biology, physics, and machine learning.
             </p>
             
             <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Unmesh.Singh@niser.ac.in</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 9256903876</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>NISER, Bhubaneswar</span>
-                </div>
+                <div class="contact-item">Unmesh.Singh@niser.ac.in</div>
+                <div class="contact-item">+91 9256903876</div>
+                <div class="contact-item">NISER, Bhubaneswar</div>
             </div>
         </div>
         
         <div class="hero-image">
             <div class="image-container">
                 <!-- Your local image -->
-                <img src="unmesh.jpg" alt="Unmesh Singh - Computational Researcher">
+                <img src="unmesh.jpg" alt="Unmesh Singh">
             </div>
         </div>
     </section>
 
-    <!-- Research Interests -->
-    <section id="research">
+    <!-- About -->
+    <section id="about">
         <div class="section-header">
-            <h2 class="section-title">Research Interests</h2>
-            <p class="section-subtitle">Interdisciplinary approach combining computational methods with biological and physical sciences</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">First-year student exploring computational sciences</p>
+        </div>
+        
+        <div class="about-content">
+            <p class="about-text">
+                I'm a first-year integrated M.Sc. student at the National Institute of Science Education and Research (NISER), beginning my journey in scientific research. 
+                My current academic focus is on building foundational knowledge in both biological and physical sciences, while developing computational skills.
+            </p>
+            <p class="about-text">
+                I'm particularly interested in how computational methods can be applied to solve problems in science. As a beginner, I'm exploring various areas including 
+                basic programming, data analysis, and introductory machine learning concepts.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests">
+        <div class="section-header">
+            <h2 class="section-title">Areas of Interest</h2>
+            <p class="section-subtitle">Topics I'm currently exploring and learning about</p>
         </div>
         
         <div class="interests-container">
             <div class="interest-card">
-                <div class="interest-icon">
-                    <i class="fas fa-dna"></i>
-                </div>
-                <h3 class="interest-title">Molecular Biology</h3>
-                <p>Protein folding prediction, gene expression analysis, and computational drug design using ML approaches.</p>
+                <h3 class="interest-title">Computational Methods</h3>
+                <p>Exploring how programming and algorithms can be applied to scientific problems, starting with basic data analysis and visualization.</p>
             </div>
             
             <div class="interest-card">
-                <div class="interest-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3 class="interest-title">AI in Science</h3>
-                <p>Applying deep learning to simulate biomolecular dynamics and analyze complex scientific datasets.</p>
+                <h3 class="interest-title">Molecular Biology Basics</h3>
+                <p>Learning foundational concepts in biology that could benefit from computational approaches in the future.</p>
             </div>
             
             <div class="interest-card">
-                <div class="interest-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3 class="interest-title">Astrophysics</h3>
-                <p>Computational models for exoplanet characterization and exploring life in extreme environments.</p>
+                <h3 class="interest-title">Introductory Physics</h3>
+                <p>Building understanding of physical principles that underlie computational models in science.</p>
             </div>
             
             <div class="interest-card">
-                <div class="interest-icon">
-                    <i class="fas fa-chart-network"></i>
-                </div>
-                <h3 class="interest-title">Systems Biology</h3>
-                <p>Analyzing biological systems through computational modeling and bioinformatics approaches.</p>
+                <h3 class="interest-title">Data Analysis</h3>
+                <p>Beginning to learn how to work with data, clean datasets, and perform basic statistical analysis.</p>
             </div>
         </div>
     </section>
@@ -911,67 +723,58 @@
     <section id="education">
         <div class="section-header">
             <h2 class="section-title">Education</h2>
-            <p class="section-subtitle">Academic background in science and research</p>
+            <p class="section-subtitle">My academic journey so far</p>
         </div>
         
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2025<br>Present</div>
-                <div class="timeline-content">
-                    <h3>Integrated M.Sc. in Sciences</h3>
-                    <p>National Institute of Science Education and Research (NISER), Bhubaneswar</p>
-                    <p class="code-font" style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Focus: Computational Biology & Physics</p>
-                </div>
+        <div class="education-container">
+            <div class="education-item">
+                <div class="education-year">2025 - Present</div>
+                <h3 class="education-title">Integrated M.Sc. in Sciences</h3>
+                <p class="education-details">National Institute of Science Education and Research (NISER), Bhubaneswar</p>
+                <p class="education-details" style="margin-top: 0.5rem; color: var(--accent);">Currently in first year, building foundational knowledge</p>
             </div>
             
-            <div class="timeline-item">
-                <div class="timeline-date">Senior<br>Secondary</div>
-                <div class="timeline-content">
-                    <h3>Senior Secondary Education - 82.4%</h3>
-                    <p>Sekhawati International Academy, Sikar, Rajasthan</p>
-                </div>
+            <div class="education-item">
+                <div class="education-year">Senior Secondary</div>
+                <h3 class="education-title">Science Stream - 82.4%</h3>
+                <p class="education-details">Sekhawati International Academy, Sikar, Rajasthan</p>
             </div>
             
-            <div class="timeline-item">
-                <div class="timeline-date">Secondary</div>
-                <div class="timeline-content">
-                    <h3>Secondary Education - 88.4%</h3>
-                    <p>Nosegay Public School, Sri Ganganagar, Rajasthan</p>
-                </div>
+            <div class="education-item">
+                <div class="education-year">Secondary School</div>
+                <h3 class="education-title">Class X - 88.4%</h3>
+                <p class="education-details">Nosegay Public School, Sri Ganganagar, Rajasthan</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Certifications -->
+    <!-- Skills -->
     <section id="skills">
         <div class="section-header">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Programming, frameworks, and tools for scientific computing</p>
+            <h2 class="section-title">Skills & Learning</h2>
+            <p class="section-subtitle">Beginning my journey in technical skills</p>
         </div>
         
-        <div class="skills-grid">
+        <div class="skills-container">
             <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programming</h3>
+                <h3>Programming (Beginner)</h3>
                 <ul class="skill-list">
-                    <li>Python <span class="skill-level">Advanced</span></li>
-                    <li>HTML/CSS <span class="skill-level">Intermediate</span></li>
-                    <li>LaTeX <span class="skill-level">Intermediate</span></li>
-                    <li>JavaScript <span class="skill-level">Basic</span></li>
+                    <li>Python <span class="skill-level">Learning</span></li>
+                    <li>HTML/CSS <span class="skill-level">Basic</span></li>
                 </ul>
             </div>
             
             <div class="skill-category">
-                <h3><i class="fas fa-cogs"></i> ML Frameworks</h3>
+                <h3>Tools & Concepts</h3>
                 <ul class="skill-list">
-                    <li>TensorFlow <span class="skill-level">Intermediate</span></li>
-                    <li>PyTorch <span class="skill-level">Intermediate</span></li>
-                    <li>Scikit-learn <span class="skill-level">Advanced</span></li>
-                    <li>NumPy/Pandas <span class="skill-level">Advanced</span></li>
+                    <li>Basic Data Analysis <span class="skill-level">Exploring</span></li>
+                    <li>Scientific Computing <span class="skill-level">Beginning</span></li>
+                    <li>LaTeX <span class="skill-level">Learning</span></li>
                 </ul>
             </div>
             
             <div class="skill-category">
-                <h3><i class="fas fa-language"></i> Languages</h3>
+                <h3>Languages</h3>
                 <ul class="skill-list">
                     <li>English <span class="skill-level">Professional</span></li>
                     <li>Hindi <span class="skill-level">Native</span></li>
@@ -979,154 +782,59 @@
                 </ul>
             </div>
         </div>
-        
-        <div class="section-header" style="margin-top: 4rem;">
-            <h2 class="section-title">Certifications</h2>
-            <p class="section-subtitle">Professional development and learning</p>
-        </div>
-        
-        <div class="certifications">
-            <div class="certification-item">
-                <div class="certification-info">
-                    <h3>Machine Learning Crash Course</h3>
-                    <p>Google Developers</p>
-                </div>
-                <div class="certification-badge">
-                    <i class="fas fa-certificate"></i>
-                </div>
-            </div>
-            
-            <div class="certification-item">
-                <div class="certification-info">
-                    <h3>Complete Python Course</h3>
-                    <p>Scalar Academy</p>
-                </div>
-                <div class="certification-badge">
-                    <i class="fas fa-certificate"></i>
-                </div>
-            </div>
-        </div>
-        
-        <div class="code-block" style="margin-top: 3rem;">
-            <span class="code-comment"># Current focus: Building computational models for protein structure prediction</span><br>
-            <span class="code-keyword">import</span> <span>tensorflow as tf</span><br>
-            <span class="code-keyword">import</span> <span>numpy as np</span><br><br>
-            <span class="code-comment"># Research interests combine biology, physics, and ML</span><br>
-            <span class="code-keyword">def</span> <span>research_interests():</span><br>
-            <span>&nbsp;&nbsp;return</span> <span class="code-string">["Protein Folding", "Computational Drug Design", "Exoplanet Analysis", "AI in Science"]</span>
-        </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
         <div class="section-header">
-            <h2 class="section-title">Projects & Research</h2>
-            <p class="section-subtitle">Current and planned computational research projects</p>
+            <h2 class="section-title">Learning Projects</h2>
+            <p class="section-subtitle">Beginning projects to apply what I'm learning</p>
         </div>
         
         <div class="projects-container">
             <div class="project-card">
-                <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                </div>
                 <div class="project-content">
-                    <h3>Protein Structure Prediction</h3>
-                    <p>Developing ML models to predict protein tertiary structures from amino acid sequences using neural networks.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">TensorFlow</span>
-                        <span class="project-tag">BioPython</span>
-                    </div>
+                    <h3>First Python Programs</h3>
+                    <p>Building basic Python skills through simple programs and exercises, focusing on problem-solving and algorithmic thinking.</p>
+                    <div class="project-status">In Progress</div>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                </div>
                 <div class="project-content">
-                    <h3>Exoplanet Data Analysis</h3>
-                    <p>Analyzing Kepler and TESS mission data to identify and characterize exoplanets using statistical methods.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">AstroPy</span>
-                        <span class="project-tag">Pandas</span>
-                    </div>
+                    <h3>Personal Website</h3>
+                    <p>Creating this portfolio website to learn HTML, CSS, and basic JavaScript while presenting my academic journey.</p>
+                    <div class="project-status">Completed</div>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-pills"></i>
-                    </div>
-                </div>
                 <div class="project-content">
-                    <h3>Drug-Target Interaction</h3>
-                    <p>Building ML models to predict drug-target interactions for computational drug discovery pipelines.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">PyTorch</span>
-                        <span class="project-tag">RDKit</span>
-                        <span class="project-tag">Scikit-learn</span>
-                    </div>
+                    <h3>Data Analysis Basics</h3>
+                    <p>Learning to work with datasets, perform basic statistical analysis, and create simple visualizations using Python libraries.</p>
+                    <div class="project-status">Planning</div>
                 </div>
             </div>
-        </div>
-        
-        <div class="code-block" style="margin-top: 3rem;">
-            <span class="code-comment"># Seeking research collaborations and internship opportunities</span><br>
-            <span class="code-keyword">if</span> <span>looking_for_collaborators </span><span class="code-keyword">and</span> <span>research_interests_aligned:</span><br>
-            <span>&nbsp;&nbsp;reach_out()</span><br>
-            <span>&nbsp;&nbsp;discuss_possibilities()</span>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
         <div class="section-header">
-            <h2 class="section-title">Contact & Collaboration</h2>
-            <p class="section-subtitle">Interested in research opportunities, internships, or collaborations</p>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">I'm open to learning opportunities and academic guidance</p>
         </div>
         
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
-                <a href="mailto:Unmesh.Singh@niser.ac.in">Unmesh.Singh@niser.ac.in</a>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Primary contact</p>
-            </div>
+        <div class="contact-container">
+            <p class="contact-message">
+                As a first-year student, I'm looking for guidance, learning opportunities, and connections with peers and professors 
+                who share interests in computational approaches to science. Feel free to reach out!
+            </p>
             
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/unmesh-singh-83a64737a/" target="_blank">unmesh-singh</a>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Professional profile</p>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3>GitHub</h3>
-                <a href="https://github.com/unmeshsingh-alt" target="_blank">unmeshsingh-alt</a>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Code & projects</p>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-university"></i>
-                </div>
-                <h3>Location</h3>
-                <a>NISER, Bhubaneswar</a>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Odisha, India</p>
+            <div class="contact-links">
+                <a href="mailto:Unmesh.Singh@niser.ac.in" class="contact-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/unmesh-singh-83a64737a/" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="https://github.com/unmeshsingh-alt" target="_blank" class="contact-link">GitHub</a>
             </div>
         </div>
     </section>
@@ -1134,25 +842,10 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/unmesh-singh-83a64737a/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/unmeshsingh-alt" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:Unmesh.Singh@niser.ac.in" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            
-            <div class="footer-info">
-                <p>First-year Integrated M.Sc. Student | National Institute of Science Education and Research</p>
-                <p style="margin-top: 0.5rem;">Computational Biology • Astrophysics • Machine Learning</p>
-            </div>
-            
+            <p class="footer-text">First Year Integrated M.Sc. Student | National Institute of Science Education and Research, Bhubaneswar</p>
+            <p class="footer-text">Currently building foundational knowledge in computational sciences</p>
             <div class="copyright">
-                &copy; 2023 Unmesh Singh. This site is built with vanilla HTML/CSS/JS.
+                &copy; 2023 Unmesh Singh. Simple, clean portfolio built with HTML, CSS, and JavaScript.
             </div>
         </div>
     </footer>
@@ -1192,16 +885,14 @@
         // Mobile menu toggle
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
 
         // Close mobile menu when clicking a link
         navItems.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.textContent = '☰';
             });
         });
 
@@ -1272,11 +963,6 @@
                     }, 100);
                 }
             }
-            
-            // Console greeting
-            console.log('%c👨‍💻 Unmesh Singh Portfolio', 'color: #2563eb; font-size: 16px; font-weight: bold;');
-            console.log('%cComputational Biology & Astrophysics Research', 'color: #6b7280;');
-            console.log('%cBuilt with vanilla HTML/CSS/JS • No frameworks • No AI-generated code', 'color: #059669; font-size: 12px;');
         });
     </script>
 </body>
