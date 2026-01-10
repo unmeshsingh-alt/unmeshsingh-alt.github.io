@@ -204,6 +204,7 @@
             color: var(--text-gray);
             transition: var(--transition);
             padding: 0.5rem 0;
+            font-weight: 500;
         }
 
         .contact-item:hover {
@@ -275,7 +276,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -287,6 +288,7 @@
             border: 1px solid var(--medium-gray);
             box-shadow: 0 5px 15px var(--shadow);
             text-align: center;
+            height: 100%;
         }
 
         .interest-card:hover {
@@ -296,15 +298,19 @@
         }
 
         .interest-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
             color: var(--dark-gray);
             font-weight: 600;
+            min-height: 2.5em; /* Ensure titles align */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .interest-card p {
             color: var(--text-gray);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         /* Education */
@@ -348,10 +354,10 @@
 
         /* Skills */
         .skills-container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -360,6 +366,7 @@
             border-radius: 8px;
             padding: 2rem;
             border: 1px solid var(--medium-gray);
+            height: 100%;
         }
 
         .skill-category h3 {
@@ -379,6 +386,8 @@
             padding: 0.7rem 0;
             color: var(--text-gray);
             border-bottom: 1px solid var(--medium-gray);
+            display: flex;
+            justify-content: space-between;
         }
 
         .skill-list li:last-child {
@@ -386,17 +395,17 @@
         }
 
         .skill-level {
-            float: right;
             color: var(--accent);
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         /* Projects */
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -407,6 +416,9 @@
             transition: var(--transition);
             border: 1px solid var(--medium-gray);
             box-shadow: 0 5px 15px var(--shadow);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -416,28 +428,44 @@
 
         .project-content {
             padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-content h3 {
             font-size: 1.3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--dark-gray);
+        }
+
+        .project-role {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .project-content p {
             color: var(--text-gray);
             margin-bottom: 1.5rem;
             font-size: 1rem;
+            flex: 1;
         }
 
-        .project-status {
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            background: rgba(44, 90, 160, 0.1);
-            color: var(--accent);
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .project-tag {
+            padding: 0.3rem 0.8rem;
+            background: var(--medium-gray);
+            color: var(--dark-gray);
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.8rem;
         }
 
         /* Contact */
@@ -626,7 +654,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <a href="#" class="logo">Unmesh <span>Singh</span></a>
         
@@ -645,14 +672,13 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Unmesh <span>Singh</span></h1>
             <div class="hero-subtitle">First Year Integrated M.Sc. Student at NISER</div>
             <p class="hero-description">
-                Currently pursuing integrated M.Sc. in Sciences at the National Institute of Science Education and Research. 
-                Beginning my journey in computational science and exploring interests in biology, physics, and machine learning.
+                Passionate about Machine Learning Applications, Computational Modeling of Biological Systems, and Astrobiology. 
+                Exploring the intersection of complex systems, neural dynamics, and physical sciences.
             </p>
             
             <div class="contact-info">
@@ -664,171 +690,181 @@
         
         <div class="hero-image">
             <div class="image-container">
-                <!-- Your local image -->
                 <img src="unmesh.jpg" alt="Unmesh Singh">
             </div>
         </div>
     </section>
 
-    <!-- About -->
     <section id="about">
         <div class="section-header">
             <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">First-year student exploring computational sciences</p>
+            <p class="section-subtitle">Exploring the boundaries of computational science and biology</p>
         </div>
         
         <div class="about-content">
             <p class="about-text">
-                I'm a first-year integrated M.Sc. student at the National Institute of Science Education and Research (NISER), beginning my journey in scientific research. 
-                My current academic focus is on building foundational knowledge in both biological and physical sciences, while developing computational skills.
+                I am a 1st-year Integrated M.Sc. student at the National Institute of Science Education and Research (NISER), Bhubaneswar. 
+                My academic journey is driven by a deep curiosity about how computational methods can solve complex problems in nature.
             </p>
             <p class="about-text">
-                I'm particularly interested in how computational methods can be applied to solve problems in science. As a beginner, I'm exploring various areas including 
-                basic programming, data analysis, and introductory machine learning concepts.
+                Currently, I am focused on mastering foundational sciences while applying machine learning and computational modeling 
+                to diverse fields ranging from exoplanetary atmospheres to biological systems and neural networks.
             </p>
         </div>
     </section>
 
-    <!-- Interests -->
     <section id="interests">
         <div class="section-header">
-            <h2 class="section-title">Areas of Interest</h2>
-            <p class="section-subtitle">Topics I'm currently exploring and learning about</p>
+            <h2 class="section-title">Research Interests</h2>
+            <p class="section-subtitle">Key areas I am passionate about researching and developing</p>
         </div>
         
         <div class="interests-container">
             <div class="interest-card">
-                <h3 class="interest-title">Computational Methods</h3>
-                <p>Exploring how programming and algorithms can be applied to scientific problems, starting with basic data analysis and visualization.</p>
+                <h3 class="interest-title">Machine Learning</h3>
+                <p>Applying ML algorithms to scientific data, with a focus on neural systems and logic in the human brain.</p>
             </div>
             
             <div class="interest-card">
-                <h3 class="interest-title">Molecular Biology Basics</h3>
-                <p>Learning foundational concepts in biology that could benefit from computational approaches in the future.</p>
+                <h3 class="interest-title">Computational Bio-Modeling</h3>
+                <p>Developing models for biological systems, genetics, and understanding complex nonlinear dynamics in life sciences.</p>
             </div>
             
             <div class="interest-card">
-                <h3 class="interest-title">Introductory Physics</h3>
-                <p>Building understanding of physical principles that underlie computational models in science.</p>
+                <h3 class="interest-title">Space Science</h3>
+                <p>Exoplanetary study, atmospheric chemistry, and astrobiology—exploring the potential for life beyond Earth.</p>
             </div>
             
             <div class="interest-card">
-                <h3 class="interest-title">Data Analysis</h3>
-                <p>Beginning to learn how to work with data, clean datasets, and perform basic statistical analysis.</p>
+                <h3 class="interest-title">Theoretical Ecology</h3>
+                <p>Studying complex systems and interactions within ecological frameworks using mathematical tools.</p>
             </div>
         </div>
     </section>
 
-    <!-- Education -->
     <section id="education">
         <div class="section-header">
             <h2 class="section-title">Education</h2>
-            <p class="section-subtitle">My academic journey so far</p>
+            <p class="section-subtitle">My academic background</p>
         </div>
         
         <div class="education-container">
             <div class="education-item">
                 <div class="education-year">2025 - Present</div>
-                <h3 class="education-title">Integrated M.Sc. in Sciences</h3>
+                <h3 class="education-title">Integrated M.Sc.</h3>
                 <p class="education-details">National Institute of Science Education and Research (NISER), Bhubaneswar</p>
-                <p class="education-details" style="margin-top: 0.5rem; color: var(--accent);">Currently in first year, building foundational knowledge</p>
+                <p class="education-details" style="margin-top: 0.5rem; color: var(--accent);">Current Student</p>
             </div>
             
             <div class="education-item">
-                <div class="education-year">Senior Secondary</div>
+                <div class="education-year">Senior Secondary Education</div>
                 <h3 class="education-title">Science Stream - 82.4%</h3>
-                <p class="education-details">Sekhawati International Academy, Sikar, Rajasthan</p>
+                <p class="education-details">Sekhawati International Academy, Sewad Badi, Sikar</p>
             </div>
             
             <div class="education-item">
-                <div class="education-year">Secondary School</div>
+                <div class="education-year">Secondary Education</div>
                 <h3 class="education-title">Class X - 88.4%</h3>
                 <p class="education-details">Nosegay Public School, Sri Ganganagar, Rajasthan</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
         <div class="section-header">
-            <h2 class="section-title">Skills & Learning</h2>
-            <p class="section-subtitle">Beginning my journey in technical skills</p>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Tools and languages I utilize for research</p>
         </div>
         
         <div class="skills-container">
             <div class="skill-category">
-                <h3>Programming (Beginner)</h3>
+                <h3>Programming & Tools</h3>
                 <ul class="skill-list">
-                    <li>Python <span class="skill-level">Learning</span></li>
-                    <li>HTML/CSS <span class="skill-level">Basic</span></li>
+                    <li>Python <span class="skill-level">Proficient</span></li>
+                    <li>HTML <span class="skill-level">Competent</span></li>
+                    <li>LaTeX <span class="skill-level">Competent</span></li>
+                    <li>Git/Github <span class="skill-level">User</span></li>
                 </ul>
             </div>
             
             <div class="skill-category">
-                <h3>Tools & Concepts</h3>
+                <h3>Frameworks & Libraries</h3>
                 <ul class="skill-list">
-                    <li>Basic Data Analysis <span class="skill-level">Exploring</span></li>
-                    <li>Scientific Computing <span class="skill-level">Beginning</span></li>
-                    <li>LaTeX <span class="skill-level">Learning</span></li>
+                    <li>TensorFlow <span class="skill-level">ML</span></li>
+                    <li>PyTorch <span class="skill-level">ML</span></li>
+                    <li>Matplotlib <span class="skill-level">Vis</span></li>
+                    <li>Machine Learning <span class="skill-level">General</span></li>
                 </ul>
             </div>
             
             <div class="skill-category">
-                <h3>Languages</h3>
+                <h3>Certifications</h3>
                 <ul class="skill-list">
-                    <li>English <span class="skill-level">Professional</span></li>
-                    <li>Hindi <span class="skill-level">Native</span></li>
-                    <li>Punjabi <span class="skill-level">Native</span></li>
+                    <li>Google ML Crash Course <span class="skill-level">Completed</span></li>
+                    <li>Scalar Python Course <span class="skill-level">Completed</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
         <div class="section-header">
-            <h2 class="section-title">Learning Projects</h2>
-            <p class="section-subtitle">Beginning projects to apply what I'm learning</p>
+            <h2 class="section-title">Experience & Projects</h2>
+            <p class="section-subtitle">Practical applications of my studies</p>
         </div>
         
         <div class="projects-container">
             <div class="project-card">
                 <div class="project-content">
-                    <h3>First Python Programs</h3>
-                    <p>Building basic Python skills through simple programs and exercises, focusing on problem-solving and algorithmic thinking.</p>
-                    <div class="project-status">In Progress</div>
+                    <h3>VULCAN Solver Analysis</h3>
+                    <div class="project-role">Under Prof. Jayesh Goyal</div>
+                    <p>Studied and analyzed the VULCAN solver for exoplanet atmospheric chemistry, focusing on stiff ODE systems and the Rosenbrock semi-implicit method. Compared Rosenbrock solvers with CVODE, DLSODES, KROME, and ARGO for stability and efficiency.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Exoplanets</span>
+                        <span class="project-tag">ODE Solvers</span>
+                        <span class="project-tag">Research</span>
+                    </div>
                 </div>
             </div>
             
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Personal Website</h3>
-                    <p>Creating this portfolio website to learn HTML, CSS, and basic JavaScript while presenting my academic journey.</p>
-                    <div class="project-status">Completed</div>
+                    <h3>Meteorological Data Analysis</h3>
+                    <div class="project-role">Coursework Project</div>
+                    <p>Analyzed Automatic Weather Station (AWS) data using Python to study climate patterns (rainfall, temperature, wind, humidity). Identified extreme weather events and cyclone signatures through statistical analysis and diurnal variation studies.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Data Analysis</span>
+                        <span class="project-tag">Climate Science</span>
+                    </div>
                 </div>
             </div>
             
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Data Analysis Basics</h3>
-                    <p>Learning to work with datasets, perform basic statistical analysis, and create simple visualizations using Python libraries.</p>
-                    <div class="project-status">Planning</div>
+                    <h3>Relevant Coursework</h3>
+                    <div class="project-role">NISER Academic Track</div>
+                    <p>Foundational studies in Origin of Life (Bio-101), Planetary Science (Eps-101), Thermodynamics & Quantum Chemistry (Chem-101), and Mechanics (Phy-101). Hands-on lab work in Biology and Chemistry.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Interdisciplinary</span>
+                        <span class="project-tag">Science</span>
+                        <span class="project-tag">Academics</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <div class="section-header">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">I'm open to learning opportunities and academic guidance</p>
+            <p class="section-subtitle">Open to collaborations and research opportunities</p>
         </div>
         
         <div class="contact-container">
             <p class="contact-message">
-                As a first-year student, I'm looking for guidance, learning opportunities, and connections with peers and professors 
-                who share interests in computational approaches to science. Feel free to reach out!
+                I am actively looking for opportunities to apply my computational skills to scientific research. 
+                Feel free to connect via email or LinkedIn.
             </p>
             
             <div class="contact-links">
@@ -839,13 +875,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="footer-text">First Year Integrated M.Sc. Student | National Institute of Science Education and Research, Bhubaneswar</p>
-            <p class="footer-text">Currently building foundational knowledge in computational sciences</p>
+            <p class="footer-text">Unmesh Singh | NISER, Bhubaneswar, Odisha, India</p>
+            <p class="footer-text">Machine Learning • Computational Biology • Astrobiology</p>
             <div class="copyright">
-                &copy; 2023 Unmesh Singh. Simple, clean portfolio built with HTML, CSS, and JavaScript.
+                &copy; 2026 Unmesh Singh. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -869,7 +904,8 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 100)) {
+                // Offset calculation adjusted for header height
+                if (window.scrollY >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -938,7 +974,7 @@
                         behavior: 'smooth'
                     });
                     
-                    // Update active nav item
+                    // Update active nav item manually for immediate feedback
                     navItems.forEach(item => item.classList.remove('active'));
                     this.classList.add('active');
                 }
